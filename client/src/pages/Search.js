@@ -22,12 +22,12 @@ const [searchResults, setSearchResults] = useState([]);
 
   useEffect(() => {
     /* This runs when the component mounts */
-    searchGoogle("");
+    searchGoogle("kittens");
   }, []);
 
   const searchGoogle = query => {
     API.search(query)
-      .then(res => setSearchResults(res.data.data))
+      .then(res => setSearchResults(res.data.items))
       .catch(err => console.log(err));
   };
 

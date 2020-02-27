@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const BASEURL = "https://api.giphy.com/v1/gifs/search?q=";
-const APIKEY = "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=20";
+const BASEURL = "https://www.googleapis.com/books/v1/volumes?q=";
+const APIKEY = "AIzaSyAMDc3YZ_37GQTepr8yWe-rYP3UmnV14vY";
 
 // Export an object with a "search" method that searches the Giphy API for the passed query
 export default {
