@@ -7,6 +7,9 @@ import API from "../utils/API";
 function Search() {
     // FOR THE FORM 
     const [inputField, setInputField] = useState("");
+    const [searchResults, setSearchResults] = useState([]);
+
+
     const handleInputChange = event => {
       const value = event.target.value;
       setInputField(value);
@@ -18,11 +21,9 @@ function Search() {
       searchGoogle(inputField)
     };
 // FOR RESULTS
-const [searchResults, setSearchResults] = useState([]);
-
   useEffect(() => {
     /* This runs when the component mounts */
-    searchGoogle("kittens");
+    searchGoogle("");
   }, []);
 
   const searchGoogle = query => {
