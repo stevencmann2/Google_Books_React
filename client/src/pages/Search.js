@@ -42,9 +42,6 @@ const viewHandler = event => {
 const addBooktoDb = async (event) => {
   const id = event.target.getAttribute("data-id");
   const book = searchResults.filter(result => result.id === id);
-  console.log(...book)
-  console.log(book)
-  console.log(book[0].selfLink)
   const bookToBeSaved = {
     "id": book[0].id,
     "title":book[0].volumeInfo.title,

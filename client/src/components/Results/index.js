@@ -15,10 +15,10 @@ return (
     <ul className="list-group">
         {searchResults.map(result => (
         <li className="list-group-item mb-2" key={result.id}>
-            <span className="btn btn-success m-2" data-id={result.id} onClick={saveHandler}>
+            <span className="btn btn-success m-2 float-right" data-id={result.id} onClick={saveHandler}>
                 Save
             </span>
-            <span className="btn btn-primary m-2" onClick={viewHandler}>
+            <span className="btn btn-primary m-2 float-right" onClick={viewHandler}>
                 View
             </span>
             <h2>{result.volumeInfo.title}</h2>
