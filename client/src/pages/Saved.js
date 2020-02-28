@@ -1,10 +1,15 @@
 import React from "react";
+import SavedResults from "../components/SavedResults"
 
 function Saved() {
+
+
+
+
+    
     return(
-        <div>
-            Saved Page
-        </div>
+
+        <SavedResults />
 
     )
 }
