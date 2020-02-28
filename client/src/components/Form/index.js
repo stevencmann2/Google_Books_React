@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 
 
@@ -8,7 +8,7 @@ const Form = ({
     inputField
 }) =>
 (
-    <div className="card p-4 mb-3">
+    <div className="card p-4 mb-3" style={styles.shadow}>
     <form>
         <h5 className="mb-3">Book Search</h5>
         <p className="mb-3">Book: </p>
@@ -26,7 +26,13 @@ const Form = ({
   </div>
    
  )
-;
+
+ const styles = {
+
+    shadow: {
+         boxShadow: '0 8px 6px -6px black' 
+    }
+}
 
 
    export default Form;

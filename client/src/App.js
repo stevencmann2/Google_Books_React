@@ -5,14 +5,15 @@ import Search from "./pages/Search";
 import Saved from "./pages/Saved";
 import Navbar from "./components/Navbar"
 import Jumbotron from "./components/Jumbotron"
+import Footer from "./components/Footer"
 
 function App() {
   return (
     <Router>
-    <div>
+    <div className="mb-5">
       <Navbar />
       <Jumbotron />
-        <div className="container">
+        <div className="container mb-5">
       <Switch>
           <Route exact path="/" component={Search} />
           <Route exact path="/search" component={Search} />
@@ -20,7 +21,13 @@ function App() {
       </Switch>
       </div>
     </div>
+  
+    
+    <Footer />
+    
     </Router>
+    
+    
  
   );
 }

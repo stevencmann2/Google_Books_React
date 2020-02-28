@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import Form from "../components/Form"
 import Results from "../components/Results"
 import API from "../utils/API";
+import EmptySearchCard from "../components/EmptySearchCard";
+
 
 
 function Search() {
@@ -35,7 +37,10 @@ function Search() {
 /////// BUTTON FUNCTION 
 const viewHandler = event => {
   event.preventDefault();
-  alert('clicked view')
+  const id = event.target.getAttribute("data-id");
+  const viewBook = searchResults.filter(result => result.id === id);
+  console.log(viewBook[0])
+  window.open(viewBook[0].volumeInfo.previewLink)
   
 }
 
@@ -49,9 +54,8 @@ const addBooktoDb = async (event) => {
     "description": book[0].volumeInfo.description,
     "image": book[0].volumeInfo.imageLinks.thumbnail,
     "category":book[0].volumeInfo.categories[0],
-    "link": book[0].selfLink
+    "link": book[0].volumeInfo.previewLink
   }
-  console.log(bookToBeSaved)
   try {
     await API.saveBook(bookToBeSaved);
   } catch(error) {
@@ -62,26 +66,31 @@ const addBooktoDb = async (event) => {
 };
 
  return(
-    <div>
+    <div style={{marginBottom: '7em'}}>
         <Form 
         inputField={inputField}
         handleFormSubmit={handleFormSubmit}
         handleInputChange={handleInputChange}
         />
 
-        
+        {searchResults.length ? (  
         <Results 
         searchResults={searchResults} 
         saveHandler={addBooktoDb}
         viewHandler={viewHandler}
         />
+        ) : 
+        (<EmptySearchCard/>)}
        
-
+       
     </div>
+    
 )
 
 
  
 };
+
+
 
 export default Search;
