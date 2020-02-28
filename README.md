@@ -30,5 +30,5 @@ https://fierce-savannah-45603.herokuapp.com/
 
 ## Authors
 
-* **Steven Mann** - *Initial work* - [Steven Mann](https://github.com/stevencmann2)
+*[Steven Mann](https://github.com/stevencmann2)
 
