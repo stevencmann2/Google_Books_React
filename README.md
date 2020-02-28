@@ -14,7 +14,7 @@ Click the deployed link below to use the application on the Heroku server, or fo
 
 
 ## Visual Guide
-
+![A demo of the app](./gif/demo.gif)
 
 ## Deployment
 
