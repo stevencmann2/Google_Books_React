@@ -8,8 +8,9 @@ Click the deployed link below to use the application on the Heroku server, or fo
 
 ### Local Use
 
-* clone this repo to a directory use the clone button above using Terminal or desired CLI 
-* run command 'npm instal'l to install necessary dependencies
+* use the clone button above using Terminal or desired CLI
+* clone this repo to a local directory 
+* run command 'npm install' to install necessary dependencies
 * then run command 'npm start' to launch the application 
 
 
